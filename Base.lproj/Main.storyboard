@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-te-3Vx">
+                                <frame key="frameInset" minX="35" minY="344" width="269" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone NR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YF1-Jk-PuA">
+                                <frame key="frameInset" minX="35" minY="274" width="269" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvr-Sm-qu5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="aq6-Az-EYl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrB-FW-xpA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="9b9-Ax-vsv"/>
+                                </constraints>
+                                <state key="normal" title="Select Contact"/>
+                                <connections>
+                                    <action selector="pickContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVA-tT-XeO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LVa-te-3Vx" firstAttribute="top" secondItem="YF1-Jk-PuA" secondAttribute="bottom" constant="49" id="6FE-I1-i6J"/>
+                            <constraint firstItem="YF1-Jk-PuA" firstAttribute="top" secondItem="uvr-Sm-qu5" secondAttribute="bottom" constant="39" id="6be-bh-g7Z"/>
+                            <constraint firstItem="qrB-FW-xpA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="FES-AX-hq9"/>
+                            <constraint firstItem="qrB-FW-xpA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="86" id="J5I-A5-gOb"/>
+                            <constraint firstItem="uvr-Sm-qu5" firstAttribute="leading" secondItem="LVa-te-3Vx" secondAttribute="leading" id="Jgi-Zd-7RO"/>
+                            <constraint firstItem="uvr-Sm-qu5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="214" id="Pi5-o9-mR8"/>
+                            <constraint firstItem="uvr-Sm-qu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="WHP-IB-r78"/>
+                            <constraint firstItem="qrB-FW-xpA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a74-mE-ZH6"/>
+                            <constraint firstItem="uvr-Sm-qu5" firstAttribute="leading" secondItem="YF1-Jk-PuA" secondAttribute="leading" id="sFt-UC-3EI"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="emailId" destination="LVa-te-3Vx" id="5F5-Lj-Mae"/>
+                        <outlet property="personName" destination="uvr-Sm-qu5" id="3HO-P6-3eD"/>
+                        <outlet property="phoneNo" destination="YF1-Jk-PuA" id="Hsz-yN-x4q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
+        </scene>
+    </scenes>
+</document>
